@@ -14,7 +14,6 @@ RUN \
     apt-get -y purge --auto-remove build-essential python3-pip && \
     apt-get install -y --no-install-recommends python3 && \
     npm cache clean --force && \
-    ./install.sh \
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* /usr/share/doc/*
 
 COPY app app
