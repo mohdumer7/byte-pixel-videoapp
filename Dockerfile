@@ -14,7 +14,8 @@ RUN \
     apt-get -y purge --auto-remove build-essential python3-pip && \
     apt-get install -y --no-install-recommends python3 && \
     npm cache clean --force && \
-    rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* /usr/share/doc/*
+    rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* /usr/share/doc/* \
+    npm run pre-ins
 
 COPY app app
 COPY public public
